@@ -13,7 +13,7 @@ logging.basicConfig()
 logger = logging.getLogger('HackRf Core')
 logger.setLevel(logging.DEBUG)
 
-libhackrf = CDLL('/home/debian/prefix/lib/libhackrf.so')
+libhackrf = CDLL('/home/debian/prefix/lib/libhackrf.so') #<- Change to directory where libhackrf.so is located
 
 def enum(*sequential, **named):
     enums = dict(zip(sequential, range(len(sequential))), **named)
